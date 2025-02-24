@@ -12,7 +12,7 @@ const CartProduct = ({product}) => {
     <div className="flex items-center justify-between bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow duration-300">
       <div className="flex items-center space-x-4">
         <img 
-          src={"http://localhost:3000/" + product.imageUrl}
+          src={`${import.meta.env.VITE_API_BASE_URL}/` + product.imageUrl}
           alt={product.name}
           className="w-24 h-24 object-cover rounded-md"
         />

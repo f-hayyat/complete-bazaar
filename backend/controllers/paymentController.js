@@ -3,7 +3,7 @@ const stripe = require("stripe")(process.env.STRIPE_Secret_Key);
 
 exports.checkoutPayment = async (req, res) => {
 	const { amount } = req.body;
-	const YOUR_DOMAIN = "http://localhost:5173";
+	const YOUR_DOMAIN = process.env.FRONTEND_URL;
 
 	try {
 		const session = await stripe.checkout.sessions.create({

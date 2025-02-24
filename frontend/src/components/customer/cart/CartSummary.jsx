@@ -14,7 +14,7 @@ const CartSummary = ({ products }) => {
 			const stripe = await loadStripe(
 				"pk_test_51QudMCSEFLjrYrUK722QmZNxgyASq4yjVRLz9A2NHnQUzTMRTOi51XG09o5sltru6lSMeKOeTgqEKbnmMKPkUWvd002IWVV8kp"
 			);
-			const response = await fetch("http://localhost:3000/api/payment", {
+			const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/payment`, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

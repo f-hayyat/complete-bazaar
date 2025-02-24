@@ -1,16 +1,13 @@
 {
-    "version": 2,
-    "builds": [
+    "rewrites": [
       {
-        "src": "./app.js",
-        "use": "@vercel/node"
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ],
-    "routes": [
+    "headers": [
       {
-        "src": "/(.*)",
-        "dest": "/",
-        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        "source": "/(.*)",
         "headers": {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
@@ -18,4 +15,4 @@
         }
       }
     ]
-  }
+}
