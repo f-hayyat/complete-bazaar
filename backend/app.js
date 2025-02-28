@@ -27,9 +27,9 @@ app.use("/api/customer", isLoggedIn, isCustomer, customerRouter);
 app.use("/api", paymentRouter);
 app.use(errorController.get404);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 mongoose.connect(MONGO_DB_URL).then(() => {
 	app.listen(PORT, () => {
-		`Server running at: http://localhost:${PORT}`;
+		console.log(`Server running at: http://localhost:${PORT}`);
 	});
 });

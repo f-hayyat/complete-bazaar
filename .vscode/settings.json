@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/10151979-223d-484a-a3f5-7ab3af6e2ef0/resourceGroups/complete-bazaar-front_group/providers/Microsoft.Web/sites/complete-bazaar-front",
+    "appService.deploySubpath": "backend"
+}
